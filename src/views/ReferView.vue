@@ -10,7 +10,7 @@
               <h3>HTML</h3>
               <ul>
                 <li v-for="refer in refers" :key="refer.id">
-                  <a href="/reference">
+                  <a :href="refer.link" targe="_blank">
                     <span className="num">{{ refer.id }}</span>
                     <span className="attr">{{ refer.title }}</span>
                     <span className="desc">{{ refer.desc2 }}</span>
@@ -33,6 +33,7 @@ import HeaderCont from "@/components/HeaderCont.vue";
 import FooterCont from "@/components/FooterCont.vue";
 import TitleCont from "@/components/TitleCont.vue";
 import ContactCont from "@/components/ContactCont.vue";
+import { ref } from "vue";
 
 export default {
   components: {
